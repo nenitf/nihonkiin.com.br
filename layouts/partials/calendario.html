@@ -1,0 +1,19 @@
+<table id="calendario">
+    <caption>
+        Calendário
+    </caption>
+    <thead>
+        <th>Data</th>
+        <th>Evento</th>
+        <th>Link</th>
+    </thead>
+    <tbody>
+        {{ range $.Site.Data.calendario }}
+        <tr>
+            <td>{{ .data }}</td>
+            <td>{{ .evento }}</td>
+            <td>{{ with .link }}<a href="{{ .url }}">{{ .title }}</a>{{ end }}</td>
+        </tr>
+        {{ end }}
+    </tbody>
+</table>

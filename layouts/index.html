@@ -1,0 +1,103 @@
+{{ define "main" }}
+    <p id="subtitulo">A Casa do Go Brasileiro</p>
+
+    <div id="topo">
+        {{ if $.Site.Data.trilha }}
+        <div id="index">
+            <ol>
+                {{ range $.Site.Data.trilha }}
+                <li>
+                    {{ if .url }}
+                        <a href="{{ .url }}">{{ .title }}</a>
+                    {{ else }}
+                        {{ .title }}
+                        {{ with .childs }}
+                        <ol>
+                            {{ range . }}
+                                <li>
+                                {{ if .url }}
+                                    <a href="{{ .url }}">{{ .title }}</a>
+                                {{ else }}
+                                    {{ .title }}
+                                {{end}}
+                                </li>
+                            {{ end }}
+                        </ol>
+                        {{ end }}
+                    {{ end }}
+                </li>
+            {{ end }}
+            </ol>
+        </div>
+        {{ end }}
+
+
+
+      <div id="direita">
+        <div id="social-icons">
+          <a href="https://www.facebook.com/BrasilNihonKiin">
+            <svg>
+              <image href="midia/facebook.svg"></image>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/nihon_kiin/">
+            <svg>
+              <image href="midia/instagram.svg"></image>
+            </svg>
+          </a>
+        </div>
+
+        {{ partial "calendario" . }}
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    {{ if where .Site.RegularPages "Type" "artigos" }}
+    <table>
+        <caption>
+            Artigos
+        </caption>
+        <thead>
+            <th>Data</th>
+            <th>Título</th>
+            <th>Autor</th>
+        </thead>
+        <tbody>
+            {{ range ( where .Site.RegularPages "Type" "artigos" | first 10 ) }}
+            <tr>
+                <td>{{ partial "time-single" . }}</td>
+                <td>
+                    <a href="{{ .Permalink }}">
+                        {{ .Title }}
+                    </a>
+                </td>
+                <td>
+                    {{ .Params.Author }}
+                </td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+    {{ end }}
+
+    <br />
+    <br />
+    <br />
+
+    <hr />
+
+    <h4>Sobre o site</h4>
+
+    <p>
+      Este site é inteiramente feito com
+      <a href="https://pages.github.com/">Github Pages</a>, HTML, CSS e TS. Se
+      você puder ou quiser contribuir com código ou discussões, visite a
+      <a
+        class="local-link"
+        href="https://github.com/Brasil-Nihon-Kiin/nihonkiin.com.br"
+        >infraestrutura no Github</a
+      >.
+    </p>
+{{ end }}

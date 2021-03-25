@@ -105,6 +105,11 @@ Essa mesma regra de evitar o backend vale para algo como criação de um fórum.
 
 ### 2.3. Configurando o Ambiente de Desenvolvimento
 
+1. Salve o executável do [hugo](https://github.com/gohugoio/hugo/releases)
+1. Abra um terminal na pasta do projeto e execute `hugo server -D -w`. O site estará disponível em `localhost:1313`
+
+---
+
 Utilizamos TypeScript para obter um ambiente de programação com mais checagem de tipos e melhor suporte à objetos, o que, em geral, leva a menos bugs, é basicamente uma versão mais agradável e simples de se utilizar de JavaScript. Além disso, ela abstrai todas as milhões de mudanças que JavaScript vêm tomando ao longo dos anos.
 
 Além disso, recomenda-se o uso do editor (IDE) VS Code, que é leve além de completo. Padronizar o ambiente de desenvolvimento é útil para que não se perca tempo com picuinhas de estilo. Por falar em estilo, recomenda-se também padronizar o formatador do código, que, no caso, seria o [Prettier][prettier] &mdash; no VS Code, <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd> é o atalho para formatar o código do arquivo atual.

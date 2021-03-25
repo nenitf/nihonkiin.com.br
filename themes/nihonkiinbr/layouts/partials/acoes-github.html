@@ -1,0 +1,7 @@
+{{if .Site.Params.Repo}}
+<ul class="remote-options">
+    <li>
+        <a href="{{.Site.Params.Repo}}/edit/main/content/{{replace .File.Path "\\" "/"}}">Edite este post</a>
+    </li>
+</ul>
+{{end}}

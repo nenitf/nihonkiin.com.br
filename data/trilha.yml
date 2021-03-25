@@ -1,0 +1,38 @@
+- title: Aprendizado
+  childs:
+    - title: O que é o Go?
+      url: principal/o_que_e_go
+    - title: Onde Jogar?
+      url: principal/onde_jogar
+    - title: Professores
+      url: principal/professores
+    - title: Cursos
+      url: principal/cursos
+    - title: Livros e Artigos
+      url: principal/livros
+    - title: Outros Recursos
+      url: principal/outros_recursos
+    - title: História da Brasil Nihon Kiin
+      url: principal/historia
+- title: Comunidade
+  childs:
+    - title: Go nas Redes Sociais e Fóruns
+      url: principal/redes_sociais
+    - title: Lista de Jogadores
+      url: principal/jogadores/jogadores.html
+    - title: Doações
+      url: principal/doacoes
+- title: Competição
+  childs:
+    - title: Calendário de Competições
+      url: principal/calendario_competicoes
+    - title: Rankings
+      url: principal/rankings
+    - title: Os Campeões
+      url: principal/campeoes
+    - title: Regulamentação
+      url: principal/regulamentacao
+- title: Loja
+  url: principal/loja
+- title: Contato e Feedback
+  url: principal/contato_e_feedback

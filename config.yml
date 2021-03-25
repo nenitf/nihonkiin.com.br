@@ -1,0 +1,13 @@
+baseURL: http://nihonkiin.com.br/
+languageCode: pt-br
+title: Brasil Nihon Kiin
+description: A casa do Go brasileiro.
+theme: nihonkiinbr
+
+params:
+  repo: https://github.com/Brasil-Nihon-Kiin/nihonkiin.com.br
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
